@@ -1,19 +1,28 @@
-// var ramIntegers = Math.floor(Math.random()* 20);
+const secondsHand = document.querySelector('.seconds-hand')
+const minutesHand = document.querySelector('.minutes-hand')
+const hoursHand = document.querySelector('.hours-hand')
+const digitalClock = document.querySelector('.digital_clock')
 
-const digitalUI = document.querySelector('.digitalUI')
+function analogClock() {
+ const now = new Date()
+ let seconds = now.getSeconds();
+ let minutes = now.getMinutes();
+ let hours = now.getHours();
 
-function finalWatch() {
+ const secondsDegrees = (seconds / 60) * 360
+ const minutesDegrees = (minutes / 60) * 360
+ const hoursDegrees = (hours / 12) * 360
 
-const basis = new Date();
+ secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
+ minutesHand.style.transform = `rotate(${minutesDegrees}deg)`;
+ hoursHand.style.transform = `rotate(${hoursDegrees}deg)`;
 
-const h = basis.getHours()
-let m = basis.getMinutes()
-let s = basis.getSeconds()
+   if (minutes < 10) {minutes = "0" + minutes}
+   if (seconds < 10) {seconds = "0" + seconds}
+   if (hours < 10) {hours = "0" + hours}
 
-if (m < 10) {m = '0' + basis.getMinutes() }
-if (s < 10) {s = '0' + basis.getSeconds() }
-
-let hour = h + ":" + m + ":" + s
-digitalUI.innerHTML = hour
+  let digitalHour = hours + ":" + minutes + ":" + seconds
+  digitalClock.innerHTML = digitalHour
 }
-setInterval(finalWatch, 1000);
+
+setInterval(analogClock, 1000)
