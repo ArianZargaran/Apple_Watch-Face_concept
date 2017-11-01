@@ -1,84 +1,132 @@
+/* line 1, main.scss */
 * {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
+/* line 3, main.scss */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 20px;
   font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+/* line 11, main.scss */
 .clock {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-width: 200px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 200px;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 10%;
   background-color: black; }
 
+/* line 23, main.scss */
 .dials {
   height: 90%;
   width: 90%;
   border-radius: 100%;
-  position: absolute; }
+  position: absolute;
+  border: .8px solid #ccc; }
 
+/* line 31, main.scss */
 .dial {
   position: absolute;
   width: 100%;
   border: 1px solid #ccc;
   top: 50%; }
 
+/* line 38, main.scss */
 .one {
-  border: 1px solid #fff; }
-
-.two {
-  transform: rotate(6deg); }
-
-.three {
-  transform: rotate(12deg); }
-
-.four {
-  transform: rotate(18deg); }
-
-.five {
-  transform: rotate(24deg); }
-
-.six {
-  transform: rotate(30deg); }
-
-.seven {
-  transform: rotate(36deg); }
-
-.eight {
-  transform: rotate(42deg); }
-
-.nine {
-  transform: rotate(48deg); }
-
-.ten {
-  transform: rotate(54deg); }
-
-.eleven {
-  transform: rotate(60deg); }
-
-.twelve {
-  transform: rotate(66deg); }
-
-.thirteen {
-  transform: rotate(72deg); }
-
-.fourteen {
-  transform: rotate(78deg); }
-
-.fifteen {
-  transform: rotate(84deg); }
-
-.sixteen {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   border: 1px solid red; }
 
+/* line 39, main.scss */
+.two {
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg); }
+
+/* line 40, main.scss */
+.three {
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg); }
+
+/* line 41, main.scss */
+.four {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg); }
+
+/* line 42, main.scss */
+.five {
+  -webkit-transform: rotate(24deg);
+          transform: rotate(24deg); }
+
+/* line 43, main.scss */
+.six {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  border: .5px solid red; }
+
+/* line 44, main.scss */
+.seven {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg); }
+
+/* line 45, main.scss */
+.eight {
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg); }
+
+/* line 46, main.scss */
+.nine {
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg); }
+
+/* line 47, main.scss */
+.ten {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg); }
+
+/* line 48, main.scss */
+.eleven {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  border: .5px solid red; }
+
+/* line 49, main.scss */
+.twelve {
+  -webkit-transform: rotate(66deg);
+          transform: rotate(66deg); }
+
+/* line 50, main.scss */
+.thirteen {
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg); }
+
+/* line 51, main.scss */
+.fourteen {
+  -webkit-transform: rotate(78deg);
+          transform: rotate(78deg); }
+
+/* line 52, main.scss */
+.fifteen {
+  -webkit-transform: rotate(84deg);
+          transform: rotate(84deg); }
+
+/* line 55, main.scss */
 .face {
   height: 80%;
   width: 80%;
@@ -86,30 +134,39 @@ body {
   position: absolute;
   z-index: 1;
   background-color: black; }
+  /* line 62, main.scss */
+  .face::after {
+    content: ' ';
+    z-index: 2;
+    height: 5%;
+    width: 5%;
+    border-radius: 100%;
+    position: absolute;
+    background: white;
+    left: 75px;
+    bottom: 75px; }
 
+/* line 75, main.scss */
 .hand {
-  border: 1px solid;
+  border: 1px solid #fff;
   width: 1px;
-  height: 40%;
-  top: 10%;
-  left: 50%;
+  height: 45%;
   position: absolute;
-  transform-origin: 0 100%;
-  border-radius: 100%; }
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  left: 78.4px;
+  bottom: 78.5px; }
 
+/* line 85, main.scss */
 .hours-hand {
   height: 30%;
-  top: 20%;
-  border: 2px solid #fff; }
+  top: 20%; }
 
-.minutes-hand {
-  border: 2px solid blue; }
-
-.seconds-hand {
-  border-color: fuchsia; }
-
+/* line 90, main.scss */
 .digital_clock {
   color: #fff;
-  align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 /*# sourceMappingURL=main.css.map */
