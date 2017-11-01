@@ -1,7 +1,13 @@
-const secondsHand = document.querySelector('.seconds-hand')
-const minutesHand = document.querySelector('.minutes-hand')
-const hoursHand = document.querySelector('.hours-hand')
-const digitalClock = document.querySelector('.digital_clock')
+let getDials = document.querySelector(".dials")
+let cloneDials = getDials.cloneNode(true)
+cloneDials.style.transform = "rotate(90deg)";
+let printClone = document.querySelector(".analog_clock").appendChild(cloneDials)
+
+const secondsHand = document.querySelector(".seconds-hand");
+const minutesHand = document.querySelector(".minutes-hand");
+const hoursHand = document.querySelector(".hours-hand");
+
+const digitalClock = document.querySelector(".digital_clock")
 
 function analogClock() {
  const now = new Date()

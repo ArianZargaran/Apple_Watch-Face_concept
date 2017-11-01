@@ -1,36 +1,112 @@
+* {
+  box-sizing: border-box; }
+
 body {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 20px;
-  font-family: Arial, sans-serif; }
+  font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .clock {
+  position: relative;
   display: flex;
+  min-width: 200px;
   justify-content: center;
-  width: 100px;
-  height: 100px;
+  align-items: center;
+  height: 200px;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 10%;
-  background-color: tomato; }
+  background-color: black; }
+
+.dials {
+  height: 90%;
+  width: 90%;
+  border-radius: 100%;
+  position: absolute; }
+
+.dial {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  top: 50%; }
+
+.one {
+  border: 1px solid #fff; }
+
+.two {
+  transform: rotate(6deg); }
+
+.three {
+  transform: rotate(12deg); }
+
+.four {
+  transform: rotate(18deg); }
+
+.five {
+  transform: rotate(24deg); }
+
+.six {
+  transform: rotate(30deg); }
+
+.seven {
+  transform: rotate(36deg); }
+
+.eight {
+  transform: rotate(42deg); }
+
+.nine {
+  transform: rotate(48deg); }
+
+.ten {
+  transform: rotate(54deg); }
+
+.eleven {
+  transform: rotate(60deg); }
+
+.twelve {
+  transform: rotate(66deg); }
+
+.thirteen {
+  transform: rotate(72deg); }
+
+.fourteen {
+  transform: rotate(78deg); }
+
+.fifteen {
+  transform: rotate(84deg); }
+
+.sixteen {
+  border: 1px solid red; }
+
+.face {
+  height: 80%;
+  width: 80%;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: black; }
 
 .hand {
   border: 1px solid;
-  width: 0;
+  width: 1px;
   height: 40%;
-  position: relative;
   top: 10%;
-  transform-origin: 0 100%; }
+  left: 50%;
+  position: absolute;
+  transform-origin: 0 100%;
+  border-radius: 100%; }
 
 .hours-hand {
-  border: 1px solid #fff; }
+  height: 30%;
+  top: 20%;
+  border: 2px solid #fff; }
 
 .minutes-hand {
-  border-color: blue;
-  right: 2px; }
+  border: 2px solid blue; }
 
 .seconds-hand {
-  border-color: fuchsia;
-  right: 4px; }
+  border-color: fuchsia; }
 
 .digital_clock {
   color: #fff;
