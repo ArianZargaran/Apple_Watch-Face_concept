@@ -6,6 +6,7 @@ body {
  flex-wrap: wrap;
  padding: 20px;
  font-family: "San Francisco Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 12px;
 }
 
 .clock {
@@ -21,8 +22,8 @@ body {
  }
 
 .dials {
- height: 90%;
- width: 90%;
+ height: 180px;
+ width: 180px;
  border-radius: 100%;
  position: absolute;
  border: .8px solid #ccc;
@@ -31,55 +32,64 @@ body {
 .dial {
   position: absolute;
   width: 100%;
-  border: 1px solid #ccc;
+  height: .7px;
+  background: #ccc;
   top: 50%;
 }
 
-.one {transform: rotate(0*6deg); border: 1px solid red;}
+.one {
+  transform: rotate(0*6deg); height: 2px; background: tomato;
+}
 .two {transform: rotate(1*6deg)}
 .three {transform: rotate(2*6deg)}
 .four {transform: rotate(3*6deg)}
 .five {transform: rotate(4*6deg)}
-.six {transform: rotate(5*6deg); border: .5px solid red;}
+.six {transform: rotate(5*6deg); background: tomato;}
 .seven {transform: rotate(6*6deg)}
 .eight {transform: rotate(7*6deg)}
 .nine {transform: rotate(8*6deg)}
 .ten {transform: rotate(9*6deg)}
-.eleven {transform: rotate(10*6deg); border: .5px solid red;}
+.eleven {transform: rotate(10*6deg); background: tomato;}
 .twelve {transform: rotate(11*6deg)}
 .thirteen {transform: rotate(12*6deg)}
 .fourteen {transform: rotate(13*6deg)}
-.fifteen {transform: rotate(14*6deg)}
+.fifteen {transform: rotate(14*6deg) }
 
 
 .face {
- height: 80%;
- width: 80%;
+ height: 164px;
+ width: 164px;
  border-radius: 100%;
  position: absolute;
  z-index: 1;
  background-color: rgb(0,0,0);
  &::after {
  content: ' ';
- z-index: 2;
- height: 5%;
- width: 5%;
+ z-index: 3;
+ height: 3px;
+ width: 3px;
  border-radius: 100%;
  position: absolute;
- background: white;
- left: 75px;
- bottom: 75px;
+ background: tomato;
+ top: 49%;
+ left: 49%;
 }
   }
 
 .hand {
-  border: 1px solid #fff;
+  background: #fff;
   width: 1px;
-  height: 45%;
+  height: 78px;
   position: absolute;
-  transform-origin: 0 100%;
-  left: 78.4px;
-  bottom: 78.5px;
+  transform-origin: 48% bottom;
+  left: 49.5%;
+  top: 2.5%;
+  border-radius: 100%;
+  z-index: 2;
+}
+
+.seconds-hand {
+  background-color: tomato;
 }
 
 .hours-hand {
@@ -88,6 +98,9 @@ body {
 }
 
 .digital_clock  {
-  color: #fff;
-  align-items: center;
+  color: #ccc;
+  font-weight: 100;
+  position: absolute;
+  right: 10%;
+  bottom: 51%;
 }
